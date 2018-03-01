@@ -6,7 +6,36 @@
         xmlns:local="clr-namespace:WpfList"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Margin="10"> 
+        <!--<ListBox Name="TodoListBox">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Title}"/>
+                        --><!--<TextBlock Margin="30,0,0,0" Width="150">Listbox Item #1</TextBlock>--><!--
+                        <ProgressBar Grid.Column="100" Minimum="0" Maximum="100" Value="{Binding Completion}" Width="300" HorizontalAlignment="Right"></ProgressBar>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>-->
+        <ListBox Name="NamesAndAgesListBox">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="125"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding FirstName}"/>
+                        <TextBlock Text="{Binding LastName}" HorizontalAlignment="Right" />
+                        <TextBlock Text="{Binding Age}" Grid.Column="100" HorizontalAlignment="Right"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
